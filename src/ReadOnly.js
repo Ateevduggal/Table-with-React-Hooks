@@ -15,7 +15,7 @@ const ReadOnly = ({ data, Edit, Delete }) => {
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
           <button className="btn btn-danger" onClick={() => Delete(data.id)}>
-          <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-trash"></i>
           </button>
         </td>
       </tr>

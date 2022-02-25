@@ -1,19 +1,12 @@
-.table {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
-
-th,
-td {
-  border: 1px solid #131212;
-  text-align: center;
-  padding: 8px;
-  font-size: 22px;
+#tr {
+  background-color: rgb(4, 68, 4) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  border-left: 2px solid white !important;
 }
-
-th {
-  background-color: rgb(126, 117, 250);
-  color: white;
-}
-

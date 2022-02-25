@@ -52,18 +52,30 @@ const App = () => {
   return (
     <>
       <div className="container-fluid">
-        <div className="row">
-          <form className="table">
-            <table>
+        <div className="row pt-5">
+          <form>
+            <table className="table table-striped table-primary table-hover text-center fs-5 table-bordered border-dark">
               <thead>
                 <tr>
-                  <th onClick={() => Sort("fullName")}>Name</th>
-                  <th onClick={() => Sort("userName")}>User Name</th>
-                  <th onClick={() => Sort("phoneNumber")}>Phone Number</th>
-                  <th onClick={() => Sort("website")}>Website</th>
-                  <th onClick={() => Sort("companyName")}>Company Name</th>
-                  <th onClick={() => Sort("email")}>Email</th>
-                  <th>Action</th>
+                  <th id="tr" onClick={() => Sort("fullName")}>
+                    Name
+                  </th>
+                  <th id="tr" onClick={() => Sort("userName")}>
+                    User Name
+                  </th>
+                  <th id="tr" onClick={() => Sort("phoneNumber")}>
+                    Phone Number
+                  </th>
+                  <th id="tr" onClick={() => Sort("website")}>
+                    Website
+                  </th>
+                  <th id="tr" onClick={() => Sort("companyName")}>
+                    Company Name
+                  </th>
+                  <th id="tr" onClick={() => Sort("email")}>
+                    Email
+                  </th>
+                  <th id="tr">Action</th>
                 </tr>
               </thead>
               <tbody>
