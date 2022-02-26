@@ -89,6 +89,7 @@ const App = () => {
                           Cancel={Cancel}
                           setEditData={setEditData}
                           editData={editData}
+                          setToggle={setToggle}
                         />
                       ) : (
                         <ReadOnly data={data} Edit={Edit} Delete={Delete} />
