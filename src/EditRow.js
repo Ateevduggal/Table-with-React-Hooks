@@ -6,22 +6,26 @@ const EditRow = ({
   setTableData,
   editData,
   setEditData,
+  setToggle
 }) => {
   const handleEditChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
+    // console.log(name, value);
     setEditData({ ...editData, [name]: value });
   };
 
   const Save = (e) => {
     e.preventDefault();
-    setTableData([...tableData, { ...editData, id: Math.random() }]);
-    console.log(tableData);
-    const delData = tableData.filter((tbd) => {
-      return editData.id !== tbd.id;
-    });
-    setTableData(delData);
+    let filteredData = tableData.filter(e => e.id != editData.id)
+    let updatedData = [...filteredData, { ...editData }].sort((a, b) => (a.id > b.id) ? 1 : -1)
+    setTableData(updatedData);
+    setToggle(null)
+    // const delData = tableData.filter((tbd) => {
+    //   return editData.id !== tbd.id;
+    // });
+    // setTableData(tableData);
   };
+
   return (
     <>
       <tr>
