@@ -15,12 +15,15 @@ const EditRow = ({
 
   const Save = (e) => {
     e.preventDefault();
-    setTableData([...tableData, { ...editData, id: Math.random() }]);
-    console.log(tableData);
-    const delData = tableData.filter((tbd) => {
-      return editData.id !== tbd.id;
-    });
-    setTableData(delData);
+    let filterData = tableData.filter((e) => e.id !== editData.id);
+    let updatedData = [...filterData, { ...editData }].sort((a, b) =>
+      a.id > b.id ? 1 : -1
+    );
+    setTableData(updatedData);
+    // const delData = tableData.filter((tbd) => {
+    //   return editData.id !== tbd.id;
+    // });
+    // setTableData(delData);
   };
   return (
     <>
@@ -28,49 +31,59 @@ const EditRow = ({
         <td>
           <input
             type="text"
+            name="fullName"
             required
             placeholder="Enter a name..."
-            name="fullName"
+            onChange={handleEditChange}
             value={editData.fullName}
-            onChange={handleEditChange}
-          ></input>
-        </td>
-        <td>
+          />
           <input
             type="text"
+            name="userName"
             required
-            placeholder="Enter an address..."
-            name="address"
-            value={editData.address}
+            placeholder="Enter user name..."
             onChange={handleEditChange}
-          ></input>
-        </td>
-        <td>
+            value={editData.userName}
+          />
           <input
             type="text"
+            name="phoneNumber"
             required
             placeholder="Enter a phone number..."
-            name="phoneNumber"
-            value={editData.phoneNumber}
             onChange={handleEditChange}
-          ></input>
-        </td>
-        <td>
+            value={editData.phoneNumber}
+          />
+          <input
+            type="text"
+            name="website"
+            required
+            placeholder="Enter website..."
+            onChange={handleEditChange}
+            value={editData.website}
+          />
+          <input
+            type="text"
+            name="companyName"
+            required
+            placeholder="Enter company name..."
+            onChange={handleEditChange}
+            value={editData.companyName}
+          />
           <input
             type="email"
+            name="email"
             required
             placeholder="Enter an email..."
-            name="email"
-            value={editData.email}
             onChange={handleEditChange}
-          ></input>
+            value={editData.email}
+          />
         </td>
-        <td className="d-flex justify-content-evenly">
+        <td className="d-flex justify-content-center">
           <button className="btn btn-success" type="submit" onClick={Save}>
-            Save
+            <i class="fa-solid fa-floppy-disk"></i>
           </button>
           <button className="btn btn-danger" type="button" onClick={Cancel}>
-            Cancel
+            <i class="fa-solid fa-ban"></i>
           </button>
         </td>
       </tr>

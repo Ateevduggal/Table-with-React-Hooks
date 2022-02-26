@@ -36,16 +36,16 @@ const Form = ({ tableData, setTableData }) => {
   return (
     <>
       <div className="container-fluid">
-        <div className="row">
-          <form className="input">
+        <div className="row py-3">
+          <form className="input d-flex flex-wrap justify-content-center">
             <input
               type="text"
               name="fullName"
               required
-              placeholder="Enter a name..."
+              placeholder="Enter full name..."
               onChange={Change}
               value={newData.fullName}
-              className="form-control-sm col-2 px-2 py-1 fs-4"
+              className="form-control-sm fs-4 col-3 mx-5"
             />
             <input
               type="text"
@@ -54,7 +54,7 @@ const Form = ({ tableData, setTableData }) => {
               placeholder="Enter user name..."
               onChange={Change}
               value={newData.userName}
-              className="form-control-sm col-2 px-2 mx-3 py-1 fs-4"
+              className="form-control-sm col-3 mx-5 fs-4"
             />
             <input
               type="text"
@@ -63,7 +63,7 @@ const Form = ({ tableData, setTableData }) => {
               placeholder="Enter a phone number..."
               onChange={Change}
               value={newData.phoneNumber}
-              className="form-control-sm col-2 px-2 mx-3 py-1 fs-4"
+              className="form-control-sm col-3 mx-5 fs-4"
             />
             <input
               type="text"
@@ -72,7 +72,7 @@ const Form = ({ tableData, setTableData }) => {
               placeholder="Enter website..."
               onChange={Change}
               value={newData.website}
-              className="form-control-sm col-2 px-2 mx-3 py-1 fs-4"
+              className="form-control-sm col-3 mx-5 fs-4 mt-4"
             />
             <input
               type="text"
@@ -81,9 +81,8 @@ const Form = ({ tableData, setTableData }) => {
               placeholder="Enter company name..."
               onChange={Change}
               value={newData.companyName}
-              className="form-control-sm col-2 px-2 mx-3 py-1 fs-4"
+              className="form-control-sm col-3 mx-5 fs-4 mt-4"
             />
-
             <input
               type="email"
               name="email"
@@ -91,10 +90,11 @@ const Form = ({ tableData, setTableData }) => {
               placeholder="Enter an email..."
               onChange={Change}
               value={newData.email}
-              className="form-control-sm col-2 px-2 mx-3 py-1 fs-4"
+              className="form-control-sm col-3 mx-5 fs-4 mt-4"
             />
+            <div className="w-100"></div>
             <button
-              className="btn-primary py-0 px-2 mx-3 col-1 fs-3"
+              className="btn-primary py-0 px-2 mx-3 fs-3 col-2 mt-4"
               onClick={Add}
               type="submit"
             >
