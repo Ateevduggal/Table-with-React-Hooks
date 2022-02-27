@@ -37,7 +37,7 @@ const Form = ({ tableData, setTableData }) => {
     <>
       <div className="container-fluid">
         <div className="row py-3">
-          <form className="input d-flex flex-wrap justify-content-center form">
+          <form className="d-flex flex-wrap justify-content-center form">
             <input
               type="text"
               name="fullName"

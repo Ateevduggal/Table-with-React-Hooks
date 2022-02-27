@@ -10,8 +10,8 @@ const ReadOnly = ({ data, Edit, Delete }) => {
         <td>{data.website}</td>
         <td>{data.companyName}</td>
         <td>{data.email}</td>
-        <td className="d-flex justify-content-evenly border-0">
-          <button className="btn btn-dark" onClick={() => Edit(data)}>
+        <td className="d-flex p-4">
+          <button className="btn btn-dark me-3" onClick={() => Edit(data)}>
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
           <button className="btn btn-danger" onClick={() => Delete(data.id)}>

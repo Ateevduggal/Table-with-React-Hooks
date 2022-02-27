@@ -99,7 +99,7 @@ const App = () => {
               </tbody>
             </table>
           </form>
-          <h2 className="mx-5 mt-4">Add a contact</h2>
+          <h1 className="mx-3 mt-4">Add a contact</h1>
           <Form tableData={tableData} setTableData={setTableData} />
         </div>
       </div>
