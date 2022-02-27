@@ -37,7 +37,7 @@ const Form = ({ tableData, setTableData }) => {
     <>
       <div className="container-fluid">
         <div className="row py-3">
-          <form className="input d-flex flex-wrap justify-content-center">
+          <form className="input d-flex flex-wrap justify-content-center form">
             <input
               type="text"
               name="fullName"
@@ -94,7 +94,7 @@ const Form = ({ tableData, setTableData }) => {
             />
             <div className="w-100"></div>
             <button
-              className="btn-primary py-0 px-2 mx-3 fs-3 col-2 mt-4"
+              className="btn-primary px-2 mx-3 fs-3 col-2 mt-4"
               onClick={Add}
               type="submit"
             >

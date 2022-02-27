@@ -10,3 +10,17 @@ body {
   font-weight: 600 !important;
   border-left: 2px solid white !important;
 }
+@media (min-width: 300px) and (max-width: 575px) {
+  .form {
+    display: block !important;
+  }
+  .form input {
+    width: 100% !important;
+    margin: 0 !important;
+    margin-bottom: 4% !important;
+  }
+  .form button{
+    width: 40% !important;
+    margin: 0 30% !important;
+  }
+}
