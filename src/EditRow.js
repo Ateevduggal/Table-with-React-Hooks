@@ -9,7 +9,6 @@ const EditRow = ({
 }) => {
   const handleEditChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
     setEditData({ ...editData, [name]: value });
   };
 
@@ -37,6 +36,8 @@ const EditRow = ({
             onChange={handleEditChange}
             value={editData.fullName}
           />
+        </td>
+        <td>
           <input
             type="text"
             name="userName"
@@ -45,6 +46,8 @@ const EditRow = ({
             onChange={handleEditChange}
             value={editData.userName}
           />
+        </td>
+        <td>
           <input
             type="text"
             name="phoneNumber"
@@ -53,6 +56,8 @@ const EditRow = ({
             onChange={handleEditChange}
             value={editData.phoneNumber}
           />
+        </td>
+        <td>
           <input
             type="text"
             name="website"
@@ -61,6 +66,8 @@ const EditRow = ({
             onChange={handleEditChange}
             value={editData.website}
           />
+        </td>
+        <td>
           <input
             type="text"
             name="companyName"
@@ -69,6 +76,8 @@ const EditRow = ({
             onChange={handleEditChange}
             value={editData.companyName}
           />
+        </td>
+        <td>
           <input
             type="email"
             name="email"

@@ -4,9 +4,10 @@ import Form from "./Form";
 import ReadOnly from "./ReadOnly";
 import EditRow from "./EditRow";
 const App = () => {
-  const [tableData, setTableData] = useState(data);
+  const [tableData, setTableData] = useState(data); // input data for table
   const [toggle, setToggle] = useState(null); //for data ids
   const [editData, setEditData] = useState({
+    // for editing data
     fullName: "",
     userName: "",
     address: "",
@@ -24,7 +25,7 @@ const App = () => {
     setTableData(delData);
   };
 
-  const Edit = (data) => {
+  const Edit = (data) => {// for opening the editable row
     setToggle(data);
     setEditData(data);
   };
@@ -32,6 +33,7 @@ const App = () => {
   const Cancel = () => {
     setToggle(null);
   };
+  
   const Sort = (sort) => {
     if (order === "asc") {
       const sorted = [

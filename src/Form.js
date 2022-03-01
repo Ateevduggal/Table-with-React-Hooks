@@ -13,11 +13,9 @@ const Form = ({ tableData, setTableData }) => {
 
   const Change = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
     setNewData({ ...newData, [name]: value });
-    console.log(newData);
   };
-  //Adding new data to our table
+
   const Add = (e) => {
     e.preventDefault();
     setTableData([...tableData, { ...newData, id: Math.random() }]); // for giving the new data some random id
